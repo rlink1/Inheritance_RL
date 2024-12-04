@@ -13,8 +13,15 @@ public class Ex1_Main {
         allAnimals.add(new Shihtzu("Bubbles"));
         allAnimals.add(new Trout("Slippey"));
 
+//        for (int i = 0; i < allAnimals.size(); i++) {
+//            allAnimals.get(i).talk();
+//        }
+
+        System.out.println("What does the dogs say?");
         for (int i = 0; i < allAnimals.size(); i++) {
-            allAnimals.get(i).talk();
+           if(allAnimals.get(i) instanceof Dog){
+               allAnimals.get(i).talk();
+           }
         }
     }
 }
