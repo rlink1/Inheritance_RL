@@ -12,5 +12,9 @@ public class Ex1_Main {
         allAnimals.add(new Rotweiller("Rubble"));
         allAnimals.add(new Shihtzu("Bubbles"));
         allAnimals.add(new Trout("Slippey"));
+
+        for (int i = 0; i < allAnimals.size(); i++) {
+            allAnimals.get(i).talk();
+        }
     }
 }
