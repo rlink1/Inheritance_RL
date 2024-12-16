@@ -11,6 +11,7 @@ class MainStageEvent extends Event {
         super.setLocation("Main Stage"); // super.method is a call to the superclasses instance method
 
         techRequirements = new ArrayList<String>();
+
     }
 
     public void addTech(String tech) {
@@ -18,6 +19,7 @@ class MainStageEvent extends Event {
     }
 
     public void printTech() {
+
 
         System.out.println("The tech requirements for " + super.getEventName() + " are: ");
 

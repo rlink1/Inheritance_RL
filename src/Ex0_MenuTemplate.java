@@ -1,3 +1,5 @@
+import Ex3_MusicFestival.Library;
+
 class Ex0_MenuTemplate {
     public static void run() {
 

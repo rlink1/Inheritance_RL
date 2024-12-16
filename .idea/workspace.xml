@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="Start!">
+    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="Working on As5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex0_MenuTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex0_MenuTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex3_MusicFestival/Ex3_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3_MusicFestival/Ex3_Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex3_MusicFestival/MainStageEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3_MusicFestival/MainStageEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex3_MusicFestival/SmallStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3_MusicFestival/SmallStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3_MusicFestival/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,16 +35,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "F:/CompSci30_RL/Inheritance_RL",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/CompSci30_RL/Inheritance_RL&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -120,7 +124,28 @@
       <option name="project" value="LOCAL" />
       <updated>1733855784894</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Working on As5">
+      <created>1734028672276</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734028672276</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Working on As5">
+      <created>1734028690521</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734028690521</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Working on As5">
+      <created>1734028805040</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734028805040</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +161,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start!" />
+    <MESSAGE value="Working on As5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on As5" />
   </component>
 </project>

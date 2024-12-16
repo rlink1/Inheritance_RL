@@ -1,3 +1,5 @@
+package Ex3_MusicFestival;
+
 import java.util.Scanner;
 
 

@@ -19,6 +19,23 @@ public class Ex3_Main {
                 }
 
         }
+        allEvents.add(new SmallStage("Despacito", "Music", "11:11"));
+
+        for (int i = 0; i < allEvents.size(); i++) {
+            if(allEvents.get(i) instanceof  SmallStage){
+                ((SmallStage)allEvents.get(i)).addLocation("the river");
+                ((SmallStage)allEvents.get(i)).addLocation("the clouds");
+                ((SmallStage) allEvents.get(i)).printLocation();
+            }
+        }
+
+
+
+
+
+
+
+
 
     }
 
