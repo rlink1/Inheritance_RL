@@ -1,22 +1,44 @@
 package Ex3_MusicFestival;
 
- class NonMusicSub extends NonMusicEvent {
+import java.util.ArrayList;
+
+class NonMusicSub extends NonMusicEvent {
+
+     ArrayList<Double> allSpace = new ArrayList<Double>();
+     public int rent;
+  private double space;
+
+    public NonMusicSub(String name, String type, String loc, double space){
+        super(name, type, loc);
+        this.space = space;
+        allSpace.add(space);
+        super.setLocation(loc);
+        this.rent = -1;
 
 
-  private Boolean hasSell;
-
-    public NonMusicSub(String name, String type, String loc){
-       super(name, type, loc);
-       super.setLocation(loc);
-       this.rent = -1;
-       hasSell = false;
     }
 
-  public void setHasSell(Boolean s){
-   this.hasSell = s;
-  }
+     public void setRent(int r){
+         this.rent = r;
+     }
 
-  public void setRent(int r){
-   this.rent = r;
-  }
+     public double returnSpace(){
+        return this.space;
+     }
+
+     public boolean checkSpace(double availableSpace){
+        double space = 0;
+         for (int i = 0; i < allSpace.size(); i++) {
+             space = allSpace.get(i) + space;
+         }
+         if(availableSpace -  space >= 0){
+             return true;
+         }
+         else{
+             return false;
+         }
+     }
+
+
+
 }
