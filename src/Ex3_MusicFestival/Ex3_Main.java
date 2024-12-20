@@ -22,13 +22,40 @@ public class Ex3_Main {
                 System.out.println("Which type of event would you like to add? Your choices are of the following:\nMainStageEvent\nNonMusicEvent\nNonMusicSub\nSmallStage");
                 String cho = Library.input.nextLine();
                 if(cho.equalsIgnoreCase("MainStageEvent")){
+                    System.out.println("\nAdding: Main Stage Event");
+                    System.out.println("\nWhat the name of this event?");
+                    String tempname = Library.input.nextLine();
+                    String temptype = Library.input.nextLine();
+                    allEvents.add(new MainStageEvent(tempname, temptype));
+                    System.out.println("Does your event have any technical requirements?");
+                    String tempCho = Library.input.nextLine();
+                    if(tempCho.startsWith("y")){
+                        System.out.println("How many technical requirements does " + tempname + " need?");
+                        int tempLoop = Library.input.nextInt();
+                        Library.input.nextLine();
+                        for (int i = 0; i < tempLoop; i++) {
+                            System.out.println("Requirement number " + tempLoop + ", please input.");
+                            String tempIns = Library.input.nextLine();
+                            for (int j = 0; j < allEvents.size(); j++) {
+                                if(j == allEvents.size() - 1){
+                                    ((MainStageEvent)allEvents.get(j)).addTech(tempIns);
+                                }
+                            }
+                        }
+                    }
 
                 }else if(cho.equalsIgnoreCase("NonMusicEvent")){
+                    System.out.println("Adding: Non Music Event");
 
                 }else if(cho.equalsIgnoreCase("NonMusicSub")){
+                    System.out.println("Adding: Non Music Sub Event");
 
                 }else if(cho.equalsIgnoreCase("SmallStage")){
+                    System.out.println("Adding: Small Stage Event");
 
+                }
+                else{
+                    System.out.println("Invalid event choice, please try again.");
                 }
 
             } else if (choice == 2) {
