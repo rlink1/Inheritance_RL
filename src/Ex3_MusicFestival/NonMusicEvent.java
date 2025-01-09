@@ -16,6 +16,10 @@ class NonMusicEvent extends Event {
         this.rent = r;
     }
 
+    public String getLoc(){
+        return getLocation();
+    }
+
 
 
 

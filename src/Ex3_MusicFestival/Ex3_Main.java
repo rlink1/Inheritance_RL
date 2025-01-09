@@ -1,5 +1,7 @@
 package Ex3_MusicFestival;
 
+import Utilities.Library;
+
 import java.util.ArrayList;
 
 public class Ex3_Main {
@@ -25,6 +27,7 @@ public class Ex3_Main {
                     System.out.println("\nAdding: Main Stage Event");
                     System.out.println("\nWhat the name of this event?");
                     String tempname = Library.input.nextLine();
+                    System.out.println("\nWhat is the type of this event?");
                     String temptype = Library.input.nextLine();
                     allEvents.add(new MainStageEvent(tempname, temptype));
                     System.out.println("Does your event have any technical requirements?");
@@ -46,6 +49,33 @@ public class Ex3_Main {
 
                 }else if(cho.equalsIgnoreCase("NonMusicEvent")){
                     System.out.println("Adding: Non Music Event");
+                    System.out.println("\nWhat the name of this event?");
+                    String tempname = Library.input.nextLine();
+                    System.out.println("\nWhat is the type of this event?");
+                    String temptype = Library.input.nextLine();
+                    String temploc = "m";
+
+                    boolean mama = true;
+                    while(mama){
+                        System.out.println("\nWhere are you planning to have this event?");
+                        boolean repeat = false;
+                        temploc = Library.input.nextLine();
+                        for (int i = 0; i < allEvents.size(); i++) {
+                            if(allEvents.get(i) instanceof NonMusicEvent){
+                                if(temploc.equalsIgnoreCase(((NonMusicEvent)allEvents.get(i)).getLoc())){
+                                    repeat = true;
+                                }
+                            }
+                        }
+                        if(repeat){
+                            System.out.println("There is already an event here, please try another location");
+                        }
+                        else{
+                            mama = false;
+                        }
+                    }
+                        allEvents.add(new NonMusicEvent(tempname,temptype,temploc));
+
 
                 }else if(cho.equalsIgnoreCase("NonMusicSub")){
                     System.out.println("Adding: Non Music Sub Event");
@@ -65,8 +95,6 @@ public class Ex3_Main {
 
 
             } else if (choice == 4) {
-
-            }  else {
                 break;
             }
         } // while
