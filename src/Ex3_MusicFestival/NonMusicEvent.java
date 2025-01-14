@@ -1,19 +1,23 @@
 package Ex3_MusicFestival;
 
 class NonMusicEvent extends Event {
-    public int rent;
+    private double rent;
 
 
     public NonMusicEvent(String name, String type, String loc ){
         super(name, type);
         super.setLocation(loc);
-        this.rent = -1; // arbitrary default integer 
+        rent = -1; // arbitrary default integer
 
     }
 
 
-    public void setRent(int r){
+    public void setRent(double r){
         this.rent = r;
+    }
+
+    public double getRent() {
+        return rent;
     }
 
     public String getLoc(){

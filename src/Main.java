@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
 //        Ex1_Main.run();
  //       Restaurant_Main.run();
-//        Ex3_Main.run();
+        Ex3_Main.run();
 //        Ex1_Golf.run();
-        Ex2_TicTacToegivemeanxgivemeanogivemethreeinarow.run();
+//        Ex2_TicTacToegivemeanxgivemeanogivemethreeinarow.run();
     }
 
 }
