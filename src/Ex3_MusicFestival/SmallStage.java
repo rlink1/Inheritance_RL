@@ -5,7 +5,6 @@ import java.util.ArrayList;
 class SmallStage extends Event{
 
     ArrayList<String> multLocations;
-    private int numArtists;
 
 
     public SmallStage(String name, String type, String time){
@@ -19,16 +18,27 @@ class SmallStage extends Event{
         multLocations.add(location);
     }
 
+    public int getAmIndex(){
+        return multLocations.size()-1;
+    }
+
+    public String getMultLocation(int index){
+        return multLocations.get(index);
+    }
+
     public void printLocation() {
 
         if(this.multLocations.size() > 1){
 
-            System.out.println("The location for " + super.getEventName() + " is: " );
+            System.out.println("The locations for " + super.getEventName() + " is: " );
 
             for (String loc : multLocations) {
-                System.out.print(loc);
+                System.out.print(loc + ", ");
             }
-            System.out.println(" at " + super.getTime());
+            System.out.println("at " + super.getTime());
+        }
+        else{
+            System.out.println("The location for " + super.getEventName() + " is: " + multLocations.get(0) + " at " + super.getTime());
         }
 
     }

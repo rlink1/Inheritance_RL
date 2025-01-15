@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 class NonMusicSub extends NonMusicEvent {
 
-     ArrayList<Double> allSpace = new ArrayList<Double>();
-     public int rent;
+     ArrayList<Double> allSpace = new ArrayList<>();
+
   private double space;
 
     public NonMusicSub(String name, String type, String loc, double space){
@@ -13,29 +13,25 @@ class NonMusicSub extends NonMusicEvent {
         this.space = space;
         allSpace.add(space);
         super.setLocation(loc);
-        this.rent = -1;
+
 
 
     }
-
-     public void setRent(int r){
-         this.rent = r;
-     }
 
      public double returnSpace(){
         return this.space;
      }
 
-     public boolean checkSpace(double availableSpace){
+     public double checkSpace(double availableSpace){
         double space = 0;
          for (int i = 0; i < allSpace.size(); i++) {
              space = allSpace.get(i) + space;
          }
          if(availableSpace -  space >= 0){
-             return true;
+             return (availableSpace - space);
          }
          else{
-             return false;
+             return -1;
          }
      }
 
