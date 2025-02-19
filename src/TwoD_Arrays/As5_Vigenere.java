@@ -11,6 +11,10 @@ public class As5_Vigenere {
 
         String keyword = "SCONA";
 
+        System.out.println(deCode(vigenere, "OGOGTSEYNTVCKA", keyword));
+
+
+
     }
 
     private static char[][] createVSquare(char[] alphabet) {
@@ -62,5 +66,40 @@ public class As5_Vigenere {
         return arr[row][col];
     }
 
-}//end class
+    public static String[] deCode(char[][] arr, String m, String key){
+        char [] keyWord = key.toCharArray();
+        char [] message = m.toCharArray();
+        char [] exp = new char[message.length];
+        char [] e = new char[message.length];
+        String [] decoded = new String[message.length];
+        for (int i = 0; i < message.length; i++) {
+            if(i > keyWord.length - 1 ){
+                exp[i] = keyWord[i%keyWord.length];
+            }
+            else{
+                exp[i] = keyWord[i];
+            }
+        }
+
+        for (int x = 0; x < message.length; x++) {
+            for (int j = 0; j < exp.length; j++) {
+                for (int i = 0; i < 26; i++) {
+                    if(arr[i].equals(exp[j])){
+                        for (int l = 0; l < message.length; l++) {
+                            int tempi = linearSearch(arr[0], message[l]);
+                            if(tempi > -1){
+                                decoded[x] = ((getChar(arr, i, tempi)) + ",");
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+            return decoded;
+        }
+
+    }
+
+//end class
 
