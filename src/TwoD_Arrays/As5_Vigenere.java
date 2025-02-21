@@ -94,8 +94,8 @@ public class As5_Vigenere {
             for (int j = 0; j < 26; j++) { // used for row
                 if (exp[i] == arr[j][0]) {
                         for (int k = 0; k < 26; k++) {
-                            if(arr[0][k] == message[i]){
-                                decoded[i] = arr[j][k];
+                            if(arr[j][k] == message[i]){
+                                decoded[i] = arr[0][k];
                             }
                         }
 
