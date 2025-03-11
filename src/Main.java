@@ -1,5 +1,6 @@
 import Ex2_Restaurant.Restaurant_Main;
 import Ex3_MusicFestival.Ex3_Main;
+import FamilyTree.FamilyTreeMain;
 import TwoD_Arrays.*;
 
 public class Main {
@@ -11,7 +12,8 @@ public class Main {
 //        Ex2_TicTacToegivemeanxgivemeanogivemethreeinarow.run();
 //        Ex3_Sudoku.run();
 //        As1_Bingo.run();
-        As5_Vigenere.run();
+//        As5_Vigenere.run();
+        FamilyTreeMain.run();
     }
 
 }
