@@ -21,4 +21,8 @@ public class Person {
     public String getName() {
         return name;
     }
+
+    public String getCountry() {
+        return country;
+    }
 }//class
