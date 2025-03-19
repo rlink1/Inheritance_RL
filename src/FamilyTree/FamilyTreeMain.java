@@ -87,48 +87,23 @@ return num;
     }
 
     public static void printFromHere(Person ptemp){
-        ArrayList<Integer> code = new ArrayList<>();
         System.out.println("Who would you like to search for?");
         String search = Library.input.nextLine();
-        if(checkChildren(ptemp, search, code) == -1){
-            System.out.println("Not found. Please try again");
-        }
-        else {
-            if(code.size() == 1){
-                System.out.println(ptemp.children.get(code.get(0)).getName());
-            }
-            else if(code.size() == 2){
-                System.out.println(ptemp.children.get(code.get(1)).children.get(code.get(0)).getName());
-            }
-            else if(code.size() == 3){
-                System.out.println(ptemp.children.get(code.get(2)).children.get(code.get(1)).children.get(code.get(0)).getName());
-            }
-            else if(code.size() == 4){
-                System.out.println(ptemp.children.get(code.get(3)).children.get(code.get(2)).children.get(code.get(1)).children.get(code.get(0)).getName());
-            }
-            else if(code.size() == 5){
-                System.out.println(ptemp.children.get(code.get(4)).children.get(code.get(3)).children.get(code.get(2)).children.get(code.get(1)).children.get(code.get(0)).getName());
-            }
-        }
+        checkChildren(ptemp, search);
+
 
 
     }
-    public static int checkChildren(Person ptemp, String searchTerm, ArrayList<Integer> arr){
-        if(ptemp.getName().equalsIgnoreCase(searchTerm)){
-            System.out.println(ptemp.getName());
-            return 1;
-        }
-        else{
-            for (int i = 0; i < ptemp.children.size(); i++) {
-                if(checkChildren(ptemp.children.get(i), searchTerm, arr) > 0){
-                    arr.add(i);
-                    //print names; make it not a public static int
-                    return i;
-                }
-
-
+    public static int checkChildren(Person ptemp, String searchTerm){
+        for (int i = 0; i < ptemp.children.size(); i++) {
+            if(ptemp.children.size() > 0){
+            if(ptemp.children.get(i).getName().equalsIgnoreCase(searchTerm)){
+                return 1;
+            }
             }
         }
-    }
+        return -1;
+
+    }//lowkey fix this frfr.
 
 }
