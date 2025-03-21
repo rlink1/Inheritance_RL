@@ -89,21 +89,20 @@ return num;
     public static void printFromHere(Person ptemp){
         System.out.println("Who would you like to search for?");
         String search = Library.input.nextLine();
+        System.out.println("\nPrinting " + search +"'s family\n");
         checkChildren(ptemp, search);
 
-
-
     }
-    public static int checkChildren(Person ptemp, String searchTerm){
-        for (int i = 0; i < ptemp.children.size(); i++) {
-            if(ptemp.children.size() > 0){
-            if(ptemp.children.get(i).getName().equalsIgnoreCase(searchTerm)){
-                return 1;
-            }
-            }
-        }
-        return -1;
+    public static void checkChildren(Person ptemp, String searchTerm){
 
-    }//lowkey fix this frfr.
+            if(ptemp.getName().equalsIgnoreCase(searchTerm)){
+                printFamily(ptemp);
+            }
+            else{
+                for (int i = 0; i < ptemp.children.size(); i++) {
+                    checkChildren(ptemp.children.get(i), searchTerm);
+                }
+            }
+    }
 
 }
