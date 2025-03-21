@@ -2,7 +2,6 @@ package FamilyTree;
 
 import Utilities.Library;
 
-import java.util.ArrayList;
 
 public class FamilyTreeMain {
     public static void run() {
@@ -41,7 +40,7 @@ public class FamilyTreeMain {
 
     public static int countFamily (Person ptemp){
         int num = 0;
-        if(ptemp.children.size() == 0){
+        if(ptemp.children.isEmpty()){
             num += 0;
 
         }
@@ -58,7 +57,7 @@ return num;
     }
 
     public static void printFamily(Person ptemp) {
-        if(ptemp.children.size() == 0){
+        if(ptemp.children.isEmpty()){
             System.out.println(ptemp.getName());
         }
         else{
