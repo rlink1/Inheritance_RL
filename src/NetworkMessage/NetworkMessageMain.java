@@ -10,7 +10,7 @@ public class NetworkMessageMain {
             allMessages.add(new Message("Client2:filed password reset on file"));
             allMessages.add(new Message("Server1: file not found"));
             allMessages.add(new Message("Server3: ping not returned"));
-            allMessages.add(new Message("Server1:write file error on disk DSK1"));
+            allMessages.add(new Message("Server1:write file error on disk DSK1       "));
             allMessages.add(new Message("Server2:disk failure on DSK2"));
             allMessages.add(new Message("Server2:diskette diskette"));
             allMessages.add(new Message("Client3:    diskette disk"));
@@ -39,8 +39,21 @@ public class NetworkMessageMain {
                 } else if (option == 2) {
                     System.out.println("\n\tSecurity Message\tMachine ID \tMachine Type ");
                     for (int i = 0; i < allMessages.size(); i++) {
-                        if(allMessages.get(i).getMessage().contains(":")){
+                        boolean oncecheck = false;
+
+                        for (int j = 0; j < allMessages.get(i).getMessage().length(); j++) {
+                            if ((oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '0') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '1') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '2') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '3') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '4') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '5') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '6') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '7') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '8') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '9')) {
+                                oncecheck = true;
+                                String tempStart = allMessages.get(i).getMessage().substring(0, j);
+                                tempStart = tempStart.trim();
+                                String tempMiddle = allMessages.get(i).getMessage().substring(j, j + 1);
+                                String tempEnd = allMessages.get(i).getMessage().substring(j + 2, allMessages.get(i).getMessage().length());
+                                tempEnd = tempEnd.trim();
+                                System.out.println(tempStart + "___" + tempMiddle + "___" + tempEnd + ".");
+                            }
+
                         }
+
                     }
 
                 } else if (option == 3) {
@@ -53,5 +66,10 @@ public class NetworkMessageMain {
                 System.out.println("Logging out. Good Bye.");        }//while
 
         }//main
-
+    public boolean scanWarning(String searchTerm, String searchWord){
+            if(searchTerm.length() == 1 && searchTerm.length()){
+                return true;
+            }
+    }
     }//class
+
