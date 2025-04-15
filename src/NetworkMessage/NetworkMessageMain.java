@@ -31,13 +31,19 @@ public class NetworkMessageMain {
                 System.out.println();
 
                 if (option == 1) {
-                    System.out.println("\nWhat message would you like to send?");
+                    System.out.println("\nWhat message would you like to send?\nPlease follow the format: Machine Type, MachineID followed by a ':' (required), Security Message");
                     String tempMessage = Library.input.nextLine();
-                    allMessages.add(new Message(tempMessage));
-                    System.out.println(tempMessage + " successfully sent!");
+                    if(tempMessage.contains(":")){
+                        allMessages.add(new Message(tempMessage));
+                        System.out.println(tempMessage + " successfully sent!");
+                    }
+                    else{
+                        System.out.println("Not added, please follow the format.");
+                    }
+
 
                 } else if (option == 2) {
-                    System.out.println("\n\tSecurity Message\tMachine ID \tMachine Type ");
+                    System.out.println("\nMachine ID\tMachine Type\tSecurity Message");
                     for (int i = 0; i < allMessages.size(); i++) {
                         boolean oncecheck = false;
 
@@ -47,7 +53,7 @@ public class NetworkMessageMain {
                                 String tempStart = allMessages.get(i).getMessage().substring(0, j);
                                 tempStart = tempStart.trim();
                                 String tempMiddle = allMessages.get(i).getMessage().substring(j, j + 1);
-                                String tempEnd = allMessages.get(i).getMessage().substring(j + 2, allMessages.get(i).getMessage().length());
+                                String tempEnd = allMessages.get(i).getMessage().substring(j + 2);
                                 tempEnd = tempEnd.trim();
                                 System.out.println(tempStart + "___" + tempMiddle + "___" + tempEnd + ".");
                             }
@@ -57,7 +63,31 @@ public class NetworkMessageMain {
                     }
 
                 } else if (option == 3) {
+                    System.out.println("What kind of warning are you looking for? (CASE SENSITIVE)");
+                    String searchTerm = Library.input.nextLine();
+                    boolean temp = false;
+                    for (int i = 0; i < allMessages.size(); i++) {
+                        if(scanWarning(searchTerm, allMessages.get(i).getMessage())){
+                            temp = true;
+                            boolean oncecheck = false;
 
+                            for (int j = 0; j < allMessages.get(i).getMessage().length(); j++) {
+                                if ((oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '0') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '1') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '2') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '3') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '4') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '5') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '6') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '7') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '8') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '9')) {
+                                    oncecheck = true;
+                                    String tempStart = allMessages.get(i).getMessage().substring(0, j);
+                                    tempStart = tempStart.trim();
+                                    String tempMiddle = allMessages.get(i).getMessage().substring(j, j + 1);
+                                    String tempEnd = allMessages.get(i).getMessage().substring(j + 2);
+                                    tempEnd = tempEnd.trim();
+                                    System.out.println(tempStart + "___" + tempMiddle + "___" + tempEnd + ".");
+                                }
+
+                            }
+                        }
+                    }
+                    if(temp == false){
+                        System.out.println("None found, please try again.");
+                    }
                 } else if (option == 4) {
                     break;
                 } else {
@@ -65,11 +95,51 @@ public class NetworkMessageMain {
                 }
                 System.out.println("Logging out. Good Bye.");        }//while
 
+
         }//main
-    public boolean scanWarning(String searchTerm, String searchWord){
-            if(searchTerm.length() == 1 && searchTerm.length()){
-                return true;
+    public static boolean scanWarning(String searchTerm, String searchWord){
+        String message = "a";
+        for (int i = 0; i < searchWord.length(); i++) {
+            if(searchWord.charAt(i) == ':'){
+                message = searchWord.substring(i +1 );
             }
+        }
+        if(message.equals("a")){
+            return false;
+        }
+        else{
+            if(message.contains(searchTerm)){
+                if(message.startsWith(searchTerm) && message.charAt(searchTerm.length()) == ' '){
+//                    System.out.println("start");
+                    return true;
+                }
+                else if(message.endsWith(searchTerm) && message.charAt(message.length() - (searchTerm.length()) - 1 ) == ' '){
+//                    System.out.println("end");
+                    return true;
+                }
+                else if(message.length() == searchTerm.length() && message.equals(searchTerm)){
+//                    System.out.println("equals to");
+                    return true;
+                }
+                else if(message.indexOf(searchTerm) > 0 && message.indexOf(searchTerm) < message.length()  - searchTerm.length()){
+                    String tempcheck = message.substring(message.indexOf(searchTerm) -1, message.indexOf(searchTerm) + searchTerm.length() + 1);
+                    if(tempcheck.startsWith(" ") && tempcheck.endsWith(" ")){
+//                        System.out.println("inbetween");
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+        }
     }
+
     }//class
 
