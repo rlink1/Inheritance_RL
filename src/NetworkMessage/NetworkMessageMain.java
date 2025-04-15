@@ -85,15 +85,19 @@ public class NetworkMessageMain {
                             }
                         }
                     }
-                    if(temp == false){
+                    if(temp){
+                        System.out.println("\nThe messages above fit the search criteria.");
+                    }
+                    else {
                         System.out.println("None found, please try again.");
                     }
                 } else if (option == 4) {
+                    System.out.println("Logging out. Good Bye.");
                     break;
                 } else {
                     System.out.println("That is not an available option");
                 }
-                System.out.println("Logging out. Good Bye.");        }//while
+                       }//while
 
 
         }//main
@@ -109,16 +113,16 @@ public class NetworkMessageMain {
         }
         else{
             if(message.contains(searchTerm)){
-                if(message.startsWith(searchTerm) && message.charAt(searchTerm.length()) == ' '){
+                if(message.equals(searchTerm)){
+//                    System.out.println("equals to");
+                    return true;
+                }
+                else if(message.startsWith(searchTerm) && message.charAt(searchTerm.length()) == ' '){
 //                    System.out.println("start");
                     return true;
                 }
                 else if(message.endsWith(searchTerm) && message.charAt(message.length() - (searchTerm.length()) - 1 ) == ' '){
 //                    System.out.println("end");
-                    return true;
-                }
-                else if(message.length() == searchTerm.length() && message.equals(searchTerm)){
-//                    System.out.println("equals to");
                     return true;
                 }
                 else if(message.indexOf(searchTerm) > 0 && message.indexOf(searchTerm) < message.length()  - searchTerm.length()){

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="Working on NetworkMessage">
+    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="Done Messages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NetworkMessage/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkMessage/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkMessage/NetworkMessageMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkMessage/NetworkMessageMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -274,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1743615569425</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Done Messages">
+      <created>1744750534452</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1744750534452</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,6 +304,7 @@
     <MESSAGE value="Warking on fam tree" />
     <MESSAGE value="Done Family Tree" />
     <MESSAGE value="Working on NetworkMessage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on NetworkMessage" />
+    <MESSAGE value="Done Messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done Messages" />
   </component>
 </project>

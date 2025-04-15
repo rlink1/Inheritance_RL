@@ -15,8 +15,11 @@ public class Message {
                                 if (m.charAt(j) == ':'){
                                     String tempStart = m.substring(0,j);
                                     tempStart = tempStart.trim();
+                                    machineType = tempStart.substring(0, j-1);
+                                    machineId = tempStart.substring(j-1,j);
                                     String tempEnd = m.substring(j + 1,m.length());
                                     tempEnd = tempEnd.trim();
+                                    warning = tempEnd;
                                     message = tempStart + ":" + tempEnd;
                                 }
                             }
