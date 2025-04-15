@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="DONE AS5!!!">
+    <list default="true" id="d347db3d-fdc9-4f1b-940f-de355116165b" name="Changes" comment="Working on NetworkMessage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NetworkMessage/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkMessage/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NetworkMessage/NetworkMessageMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkMessage/NetworkMessageMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,13 @@
     &quot;assignee&quot;: &quot;rlink1&quot;
   }
 }</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="h,,,," />
+      </list>
+    </option>
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/rlink1/Inheritance_RL&quot;,
@@ -194,14 +203,79 @@
       <option name="project" value="LOCAL" />
       <updated>1739299187619</updated>
     </task>
-    <task id="LOCAL-00016" summary="DONE AS5!!!">
-      <created>1740109375736</created>
+    <task id="LOCAL-00016" summary="Working on vig">
+      <option name="closed" value="true" />
+      <created>1739990385049</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1740109375736</updated>
+      <updated>1739990385049</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="DONE VIG">
+      <option name="closed" value="true" />
+      <created>1740162940419</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1740162940419</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Warking on fam tree">
+      <option name="closed" value="true" />
+      <created>1741714878575</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1741714878575</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Warking on fam tree">
+      <option name="closed" value="true" />
+      <created>1742233252228</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1742233252228</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Warking on fam tree">
+      <option name="closed" value="true" />
+      <created>1742405994686</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1742405994686</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Done Family Tree">
+      <option name="closed" value="true" />
+      <created>1742576026100</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1742576026100</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Done Family Tree">
+      <option name="closed" value="true" />
+      <created>1742576122802</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1742576122802</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Done Family Tree">
+      <option name="closed" value="true" />
+      <created>1742578178752</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742578178752</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Working on NetworkMessage">
+      <option name="closed" value="true" />
+      <created>1743615569425</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1743615569425</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,7 +293,10 @@
     <MESSAGE value="Start!" />
     <MESSAGE value="Working on As5" />
     <MESSAGE value="Working on vig" />
-    <MESSAGE value="DONE AS5!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="DONE AS5!!!" />
+    <MESSAGE value="DONE VIG" />
+    <MESSAGE value="Warking on fam tree" />
+    <MESSAGE value="Done Family Tree" />
+    <MESSAGE value="Working on NetworkMessage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on NetworkMessage" />
   </component>
 </project>
