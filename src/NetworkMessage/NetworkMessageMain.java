@@ -69,20 +69,8 @@ public class NetworkMessageMain {
                     for (int i = 0; i < allMessages.size(); i++) {
                         if(scanWarning(searchTerm, allMessages.get(i).getMessage())){
                             temp = true;
-                            boolean oncecheck = false;
 
-                            for (int j = 0; j < allMessages.get(i).getMessage().length(); j++) {
-                                if ((oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '0') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '1') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '2') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '3') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '4') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '5') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '6') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '7') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '8') || (oncecheck == false && allMessages.get(i).getMessage().charAt(j) == '9')) {
-                                    oncecheck = true;
-                                    String tempStart = allMessages.get(i).getMessage().substring(0, j);
-                                    tempStart = tempStart.trim();
-                                    String tempMiddle = allMessages.get(i).getMessage().substring(j, j + 1);
-                                    String tempEnd = allMessages.get(i).getMessage().substring(j + 2);
-                                    tempEnd = tempEnd.trim();
-                                    System.out.println(tempStart + "___" + tempMiddle + "___" + tempEnd + ".");
-                                }
-
-                            }
+                            System.out.println(allMessages.get(i).getMessage());
                         }
                     }
                     if(temp){
@@ -144,6 +132,5 @@ public class NetworkMessageMain {
             }
         }
     }
-
     }//class
 
